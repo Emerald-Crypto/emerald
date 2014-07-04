@@ -1,9 +1,10 @@
+.RECIPEPREFIX = 
 
 TEMPLATE = app
 TARGET =
-VERSION = 0.6.3
+VERSION = 0.7.1
 INCLUDEPATH += src src/json src/qt
-DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE USE_IPV6
+DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE D__NO_SYSTEM_INCLUDES
 CONFIG += no_include_pwd
 
 # for boost 1.37, add -mt to the boost libraries
@@ -17,13 +18,28 @@ CONFIG += no_include_pwd
 #    BDB_LIB_PATH, OPENSSL_INCLUDE_PATH and OPENSSL_LIB_PATH respectively
 # Change following your build environment
 # I am using mingw to build
+BOOST_LIB_SUFFIX=-mgw49-mt-s-1_55
+BOOST_INCLUDE_PATH=C:/install/deps/boost_1_55_0
+BOOST_LIB_PATH=C:/install/deps/boost_1_55_0/stage/lib
+#BOOST_LIB_SUFFIX=-mgw46-mt-sd-1_53
+#BOOST_INCLUDE_PATH=C:/install/deps/boost_1_53_0
+#BOOST_LIB_PATH=C:/install/deps/boost_1_53_0/stage/lib
+BDB_INCLUDE_PATH=C:/install/deps/db-4.8.30.NC/build_unix
+BDB_LIB_PATH=C:/install/deps/db-4.8.30.NC/build_unix
+OPENSSL_INCLUDE_PATH=C:/install/deps/openssl-1.0.1h/include
+OPENSSL_LIB_PATH=C:/install/deps/openssl-1.0.1h
+MINIUPNPC_INCLUDE_PATH=C:/install/deps/
+MINIUPNPC_LIB_PATH=C:/install/deps/miniupnpc
+QRENCODE_INCLUDE_PATH=C:/install/deps/qrencode-3.4.3
+QRENCODE_LIB_PATH=C:/install/deps/qrencode-3.4.3/.libs
+
 
 OBJECTS_DIR = build
 MOC_DIR = build
 UI_DIR = build
 
-# use: qmake "RELEASE=1"
-contains(RELEASE, 1) {
+#use: qmake "RELEASE=1"
+contains(RELEASE,1) {
     # Mac: compile for maximum compatibility (10.5, 32-bit)
     macx:QMAKE_CXXFLAGS += -mmacosx-version-min=10.5 -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk
     macx:QMAKE_CFLAGS += -mmacosx-version-min=10.5 -arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk
@@ -291,7 +307,8 @@ OTHER_FILES += \
 # platform specific defaults, if not overridden on command line
 isEmpty(BOOST_LIB_SUFFIX) {
     macx:BOOST_LIB_SUFFIX = -mt
-    windows:BOOST_LIB_SUFFIX = -mgw45-mt-d-1_53
+#    windows:BOOST_LIB_SUFFIX = -mgw46-mt-1_53
+    windows:BOOST_LIB_SUFFIX = -mgw49-mt-s-1_55
 }
 
 isEmpty(BOOST_THREAD_LIB_SUFFIX) {
