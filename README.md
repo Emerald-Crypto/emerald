@@ -1,3 +1,5 @@
+Download windows wallet <url>https://drive.google.com/folderview?id=0B22_jNX9iZCsMVRlbDZ5NVg4cXc&usp=sharing</url>
+
 Emerald - a fork of Litecoin. Like Litecoin it uses scrypt as a proof of work scheme.
 
 	- Total coins will be 31,499,000.
