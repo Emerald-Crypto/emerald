@@ -1,9 +1,9 @@
 Building Emarald
 
-See doc/readme-qt.rst for instructions on building Emarald-QT,
+See doc/readme-qt.rst for instructions on building Emerald-QT,
 the intended-for-end-users, nice-graphical-interface, reference
-implementation of Emarald.
+implementation of Emerald.
 
 See doc/build-*.txt for instructions on building emaraldd,
 the intended-for-services, no-graphical-interface, reference
-implementation of Emarald.
+implementation of Emerald.
