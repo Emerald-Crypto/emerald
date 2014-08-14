@@ -1,4 +1,4 @@
-Download windows wallet <url>https://drive.google.com/folderview?id=0B22_jNX9iZCsMVRlbDZ5NVg4cXc&usp=sharing</url>
+Download windows wallet <url>http://emeraldcrypto.org</url>
 
 Emerald - a fork of Litecoin. Like Litecoin it uses scrypt as a proof of work scheme.
 
@@ -10,6 +10,17 @@ Emerald - a fork of Litecoin. Like Litecoin it uses scrypt as a proof of work sc
 	- Start 0 emeralds for the first 400 blocks (except 1st block which is used for bounty etc), then 300 blocks each for 1, 2, 3 and 4 emeralds. Starting block 1601 will be 5 emeralds per block. This is to ensure fair start.
 	- The default ports are 12127(connect) and 12128(json rpc).
 
+===================
+
+V 0.8.2.1
+
+Added Hardfork at block 1,600,000 to implement Dark Gravity Wave 3 difficulty adjustment.
+
+New checkpoint added
+
+===================
+
+Future updates include upgrading to Bitcoin 9.x core for improved security and client functionality.
 
 Development process
 ===================
