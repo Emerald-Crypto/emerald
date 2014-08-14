@@ -16,6 +16,8 @@ V 0.8.2.1
 
 Added Hardfork at block 1,600,000 to implement Dark Gravity Wave 3 difficulty adjustment.
 
+OpenSSL updated to 1.0.1i
+
 New checkpoint added
 
 ===================
