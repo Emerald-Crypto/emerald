@@ -23,8 +23,6 @@ namespace Checkpoints
     //    timestamp before)
     // + Contains no strange transactions
     //
-
-	// no checkpoint now, can be added in later releases
     static MapCheckpoints mapCheckpoints =
             boost::assign::map_list_of
             (     1, uint256("0x01aa92d97daf7fa2987ffb0ec5778f35cdaf8cb2948018e636482693b43ff9fd"))
@@ -55,6 +53,26 @@ namespace Checkpoints
 			(1602099, uint256("0xc2584591289d987515db9db61472c83381ea9fc3efa3e3f1831c80d69991a4ad"))
 			(1602879, uint256("0x6bd6e6198fa1d30e6c63631379e4f4117dfdc12d6369d296cbf48ec0654610ca"))
 			(1604099, uint256("0xb31e5cf03c446964675889ad7ddc3807fe8b8a3351279b447c04c7b2335d1fac"))
+			(1688888, uint256("0xac6f0a75b9cd7a5a71e94dd0055e0bac8f6c591d527c21541f6cb2a768c3afa8"))
+			(1792464, uint256("0xa244296f4a8e691bbd18e631e8e22c6de4994c0bc32008c03f26767774d12071"))
+			(1800000, uint256("0xfe013454ef287f154a60444b50ec2a1cebb3ec6aaa75f57e657e34b34a83cbe4"))
+			(1899998, uint256("0xc9c2d4ea1ef806e72eb575e4cd1a71e2391fc5e1eda7c83818cf0f8d5a79711e"))
+			(2000000, uint256("0x77afc9b139cb3d387912a966dd0cea8c514e5909d316e43f11510685286568a0"))
+			(2010000, uint256("0xc1c0a6ec810990f488fcd35f9ba02e65eb8bea53d85988c1bdffe7bbeed9df30"))
+			(2020000, uint256("0xcf1e41e827b22f07e1e28d959b75cfd4a1634f9007ecb2c7856c9f0c0474f23b"))
+			(2030000, uint256("0x1a37ccfc0e3789c96c2dc1c15e48cb94ba1fdfc90c133e22f6fbdc73c8f6a469"))
+			(2040002, uint256("0x639320bbbe437673e024d42034e0c77a6c95b9f0ddb554f0ba0fa07150d5a2b2"))
+			(2050000, uint256("0x3b5bdc1bd29a5d83d50f6505284ccd29f5edf13d3bfb29456fd888227e526dbf"))
+			(2060500, uint256("0x955131f17619c0a6e11fb4b04ee6d7179b894e111dd9b312fffd0674f9482a8b"))
+			(2200000, uint256("0x80156fc7bfe55b561e770f6f6c5f4e35bb5b0e6abfc22aec4e120e98cb805296"))
+		    (2300000, uint256("0x588e732bbad22487846535754d79e7b13cc900df4e85a781832df5f38cecc64d"))
+			(2400000, uint256("0x4e4ba04bfcabdca27632812d5e0b4525b36b48a88f0b3109cd71f888d00c5975"))
+			(2500000, uint256("0x94eb7bfa6c8f02a0c8b39c946deebf730950160ef8316cb763fddc69c155745a"))
+			(2600000, uint256("0xc56159b69c10655b5d019c59f155f2113aee1087e3c0cb6e82f943fe01b2b0f1"))
+			(2700000, uint256("0x89db22bb550a93cfba8f74e102802c49e7b5ac50bf8909e85bf252bce45204be"))
+			(2778170, uint256("0x804784b7a60bdcd0b93d81a80a0d5d1968e0421f745347ad9d679cfd120bfd96"))
+			(3200008, uint256("0x2543c18e7c1debac80b6a9366cd3bc2721adae7b6fe9da402599478b3b0826cc"))
+			(3211017, uint256("0x737592dadcf505f43bff9a8c72927838631255d7ac1040a4adf8b1661169d86c"))
 			;
 
 
@@ -69,8 +87,7 @@ namespace Checkpoints
 
     int GetTotalBlocksEstimate()
     {
-        if (fTestNet) return 0;
-	
+        if (fTestNet) return 0;	
         return mapCheckpoints.rbegin()->first;
     }
 

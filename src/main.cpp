@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2011-2012 Litecoin Developers
-// Copyright (c) 2013 Emerald Developers
+// Copyright (c) 2013-2014 Emerald Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -833,7 +833,7 @@ uint256 static GetOrphanRoot(const CBlock* pblock)
 
 int64 static GetBlockValue(int nHeight, int64 nFees)
 {
-    int64 nSubsidy = 5 * COIN;
+    int64 nSubsidy = 0.1 * COIN;
 
     if(nHeight == 1)
     {
@@ -859,10 +859,25 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
     {
         nSubsidy = 4 * COIN;
     }
-    else
+    else if(nHeight < 3110401)   
     {
-        // Subsidy is cut in half every 3,110,400 blocks, which will occur approximately every 2 years
-        nSubsidy >>= (nHeight / 3110400); // Emerald: 3,110,400 blocks in ~2 years
+        nSubsidy = 5 * COIN;
+    }
+	else if(nHeight < 3888001)   
+    {
+        nSubsidy = 2.5 * COIN;
+    }
+	else if(nHeight < 4665601)   
+    {
+        nSubsidy = 1 * COIN;
+    }
+	else if(nHeight < 5443201)   
+    {
+        nSubsidy = 0.5 * COIN;
+    }
+	else if(nHeight < 6220801)   
+    {
+        nSubsidy = 0.25 * COIN;
     }
 
     return nSubsidy + nFees;
