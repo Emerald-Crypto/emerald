@@ -7,12 +7,12 @@
 INCLUDEPATHS= \
  -I"C:\install\deps\boost_1_55_0" \
  -I"C:\install\deps\db-4.8.30.NC\build_unix" \
- -I"C:\install\deps\openssl-1.0.1i\include" 
+ -I"C:\install\deps\openssl-1.0.1j\include" 
 
 LIBPATHS= \
  -L"C:\install\deps\boost_1_55_0\stage/lib" \
  -L"C:\install\deps\db-4.8.30.NC\build_unix" \
- -L"C:\install\deps\openssl-1.0.1i" 
+ -L"C:\install\deps\openssl-1.0.1j" 
 
 LIBS= \
  -l boost_system-mgw49-mt-s-1_55 \
